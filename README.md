@@ -1,2 +1,2 @@
 # Music-bot
-my shitty attempt at making a music bot
+my awful attempt at making a music bot
