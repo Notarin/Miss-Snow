@@ -1,2 +1,2 @@
 # Music-bot
-my awful attempt at making a music bot
+not to self, actually implement ytdl
