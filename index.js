@@ -2,6 +2,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const conf = require("./config.json");
+const ytdl = require('ytdl-core-discord');
 
 //say bot name on boot
 client.on('ready', () => {
@@ -25,6 +26,7 @@ client.on("message", message => {
   if (command === 'test') {
     message.reply('your command was ' + command + ' and arguements were ' + args)
   }
+  if (command === '')
   //pulls post from yandere
   if (command === 'yandere') {
     switch (message.channel.nsfw) {
