@@ -26,36 +26,8 @@ client.on("message", message => {
   if (command === 'test') {
     message.reply('your command was ' + command + ' and arguements were ' + args)
   }
-  if (command === '')
-  //pulls post from yandere
-  if (command === 'yandere') {
-    switch (message.channel.nsfw) {
-      //auto nsfw
-      case true:
-        var rating = "e";
-        console.log("nsfw");
-        break;
-      case false:
-        var rating = "s";
-        console.log("sfw");
-        break;
-    }
-    console.log("request recieved");
-    message.reply('request recieved');
-    //changes aruments into a string
-    let strargs = args.toString();
-    //replaces every comma into a plus in the string
-    let newargs = strargs.replace(/,/g, '+');
-    //pulls post from api and sends it
-    require("request")("https://yande.re/post.json?limit=1&tags=order%3Arandom+rating%3A" + rating + "+" + newargs,
-      function(err, res, body) {
-        let data = JSON.parse(body);
-        if (data['0'] !== undefined) {
-          message.channel.send(data['0'].sample_url)
-        } else {
-          message.channel.send("no post found:(")
-        }
-      });
+  if (command === '') {
+    message.reply('um...hi?');
   }
 });
 
