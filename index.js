@@ -2,7 +2,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const conf = require("./config.json");
-const ytdl = require('ytdl-core-discord');
 
 //say bot name on boot
 client.on('ready', () => {
