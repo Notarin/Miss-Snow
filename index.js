@@ -25,6 +25,7 @@ client.on("message", message => {
   if (command === 'test') {
     message.reply('your command was ' + command + ' and arguements were ' + args)
   }
+  //placeholder command
   if (command === '') {
     message.reply('um...hi?');
   }
