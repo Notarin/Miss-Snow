@@ -2,6 +2,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const conf = require("./config.json");
+const pp = require("./pp.json");
+const fs = require('fs');
 
 //say bot name on boot
 client.on('ready', () => {
@@ -28,6 +30,23 @@ client.on("message", message => {
   //placeholder command
   if (command === '') {
     message.reply('um...hi?');
+  }
+  if (command === 'penis') {
+    message.reply('in testing');
+    var json = JSON.parse(fs.readFileSync('./pp.json').toString());
+    console.log(json)
+    var id = message.author.id;
+    console.log(id)
+    if (json[id]) {
+      message.reply('your pp is ' + json[id] + 'inches long!')
+    }
+    else {
+      var sid = json[id];
+      var sid = Math.trunc(Math.random() * 20);
+      message.reply('pp scan says your pp is ' + sid + 'inches long!')
+    }
+    var json = { [id]: sid };
+    fs.writeFileSync("pp.json", JSON.stringify(json));
   }
 });
 
