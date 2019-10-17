@@ -31,22 +31,26 @@ client.on("message", message => {
   if (command === '') {
     message.reply('um...hi?');
   }
+  if (command === '&') {
+    message.channel.send('*visible confusion*');
+  }
   if (command === 'penis') {
     message.reply('in testing');
     var json = JSON.parse(fs.readFileSync('./pp.json').toString());
     console.log(json)
     var id = message.author.id;
     console.log(id)
+      console.log(json[id])
     if (json[id]) {
-      message.reply('your pp is ' + json[id] + 'inches long!')
+      var sid = json[id];
+      message.reply('your pp is ' + sid + 'inches long!')
     }
     else {
-      var sid = json[id];
       var sid = Math.trunc(Math.random() * 20);
+      json[id] = sid;
       message.reply('pp scan says your pp is ' + sid + 'inches long!')
+      fs.writeFileSync("pp.json", JSON.stringify(json));
     }
-    var json = { [id]: sid };
-    fs.writeFileSync("pp.json", JSON.stringify(json));
   }
 });
 
