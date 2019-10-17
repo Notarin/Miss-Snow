@@ -8,6 +8,7 @@ const fs = require('fs');
 //say bot name on boot
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setActivity(conf.prefix);
 });
 
 //triggers on messages
