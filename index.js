@@ -27,6 +27,9 @@ client.on("message", message => {
   if (command === 'help') {
   message.reply('no help setup yet')
   }
+  if (command === 'eval') {
+  message.reply('no eval setup yet')
+  }
   //test command to see both the command and arguments
   if (command === 'test') {
     message.reply('your command was ' + command + ' and arguements were ' + args)
