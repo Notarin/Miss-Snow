@@ -1,0 +1,6 @@
+{
+"help" : "This message.",
+"invite" : "Invite this bot to your server.",
+"eval" : "owner only command",
+"test" : "returns your command and arguments"
+}

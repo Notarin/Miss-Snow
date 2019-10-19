@@ -27,7 +27,7 @@ client.on("message", message => {
   const argl = message.content.slice(conf.prefix.length + command.length)
   //commands start here
   if (command === 'help') {
-  message.reply('no help setup yet')
+    console.log(help);
   }
   if (command === 'invite') {
     message.reply("https://discordapp.com/api/oauth2/authorize?client_id=468281346200961024&permissions=8&scope=bot")
