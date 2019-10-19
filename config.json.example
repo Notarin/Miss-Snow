@@ -3,5 +3,5 @@
 "token" : "TOKEN",
 "ownerID" : "<@YOUR ID>",
 "yapikey" : "Youtube APIv3 key",
-"debug" : 1
+"debug" : 0
 }
