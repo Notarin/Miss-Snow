@@ -72,6 +72,50 @@ client.on("message", message => {
       fs.writeFileSync("pp.json", JSON.stringify(json));
     }
   }
+  if (command === 'shitpost') {
+    var rand = Math.floor(Math.random() * (20 - 1 + 1) + 1)
+    if (rand == 1) {
+
+    } else if (rand == 2) {
+
+    } else if (rand == 3) {
+
+    } else if (rand == 4) {
+
+    } else if (rand == 5) {
+
+    } else if (rand == 6) {
+
+    } else if (rand == 7) {
+
+    } else if (rand == 8) {
+
+    } else if (rand == 9) {
+
+    } else if (rand == 10) {
+
+    } else if (rand == 11) {
+
+    } else if (rand == 12) {
+
+    } else if (rand == 13) {
+
+    } else if (rand == 14) {
+
+    } else if (rand == 15) {
+
+    } else if (rand == 16) {
+
+    } else if (rand == 17) {
+
+    } else if (rand == 18) {
+
+    } else if (rand == 19) {
+
+    } else {
+      
+    }
+  }
   //commands end here
 });
 
