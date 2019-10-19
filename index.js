@@ -5,6 +5,7 @@ const conf = require("./config.json");
 const pp = require("./pp.json");
 const fs = require('fs');
 const help = require("./commands.json");
+const sp = require("./shitpost.json");
 
 //startup code
 client.on('ready', () => {
@@ -73,11 +74,12 @@ client.on("message", message => {
     }
   }
   if (command === 'shitpost') {
-    var rand = Math.floor(Math.random() * (20 - 1 + 1) + 1)
-    message.channel.send(shitpost.rand);
+    var rand = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+    console.log(sp[rand]);
+    message.channel.send(sp[rand]);
   }
   //commands end here
 });
 
 //logs in with token
-client.login(conf.token);
+client.login("NjM1MjUxOTMwNjQxMzM0MzEy.XauWsg.yDV_yJBldbBojlQv5Y_ath-iBxc");
