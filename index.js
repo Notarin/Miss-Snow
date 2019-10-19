@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const conf = require("./config.json");
 const pp = require("./pp.json");
 const fs = require('fs');
+const help = require("./commands.json");
 
 //startup code
 client.on('ready', () => {
