@@ -5,7 +5,7 @@ const conf = require("./config.json");
 const pp = require("./pp.json");
 const fs = require('fs');
 
-//say bot name on boot
+//startup code
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setActivity(conf.prefix);
