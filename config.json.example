@@ -1,7 +1,7 @@
 {
 "prefix" : "&",
 "token" : "TOKEN",
-"ownerID" : "YOUR ID",
+"ownerID" : "<@YOUR ID>",
 "yapikey" : "Youtube APIv3 key",
 "debug" : 1
 }
