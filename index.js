@@ -23,18 +23,16 @@ client.on("message", message => {
   //splits the message into the command and arguements
   const args = message.content.slice(conf.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  //help command
+  //commands start here
   if (command === 'help') {
   message.reply('no help setup yet')
   }
   if (command === 'eval') {
   message.reply('no eval setup yet')
   }
-  //test command to see both the command and arguments
   if (command === 'test') {
     message.reply('your command was ' + command + ' and arguements were ' + args)
   }
-  //placeholder command
   if (command === '') {
     message.reply('um...hi?');
   }
@@ -59,6 +57,7 @@ client.on("message", message => {
       fs.writeFileSync("pp.json", JSON.stringify(json));
     }
   }
+  //commands end here
 });
 
 //logs in with token
