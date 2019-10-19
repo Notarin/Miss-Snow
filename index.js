@@ -23,12 +23,26 @@ client.on("message", message => {
   //splits the message into the command and arguements
   const args = message.content.slice(conf.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
+  const argl = message.content.slice(conf.prefix.length + command.length)
   //commands start here
   if (command === 'help') {
   message.reply('no help setup yet')
   }
+  if (command === 'invite') {
+    message.reply("https://discordapp.com/api/oauth2/authorize?client_id=468281346200961024&permissions=8&scope=bot")
+  }
   if (command === 'eval') {
-  message.reply('no eval setup yet')
+  if (toString(message.author === conf.ownerID)) {
+    if (conf.debug) {console.log("passed as: " + message.author);}
+    eval(argl);
+  }
+  else {
+    if (conf.debug) {
+      console.log("failed as: " + message.author);
+      console.log("needed: " + conf.ownerID);
+    }
+    message.reply("you dont have the permission, sorry.:()")
+  }
   }
   if (command === 'test') {
     message.reply('your command was ' + command + ' and arguements were ' + args)
