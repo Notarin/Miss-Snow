@@ -9,6 +9,9 @@ const fs = require('fs');
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setActivity(conf.prefix);
+  if (conf.debug==1) {
+    console.log("debugging on")
+  }
 });
 
 //triggers on messages
