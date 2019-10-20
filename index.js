@@ -4,11 +4,8 @@ const client = new Discord.Client();
 const conf = require("./config.json");
 const pp = require("./pp.json");
 const fs = require('fs');
-<<<<<<< HEAD
-=======
 const help = require("./commands.json");
 const sp = require("./shitpost.json");
->>>>>>> 76148687d1ea8a974e53c83c0fe86f1bc9a8c48d
 
 //startup code
 client.on('ready', () => {
@@ -77,54 +74,14 @@ client.on("message", message => {
     }
   }
   if (command === 'shitpost') {
-<<<<<<< HEAD
-    var rand = Math.floor(Math.random() * (20 - 1 + 1) + 1)
-    if (rand == 1) {
-
-    } else if (rand == 2) {
-
-    } else if (rand == 3) {
-
-    } else if (rand == 4) {
-
-    } else if (rand == 5) {
-
-    } else if (rand == 6) {
-
-    } else if (rand == 7) {
-
-    } else if (rand == 8) {
-
-    } else if (rand == 9) {
-
-    } else if (rand == 10) {
-
-    } else if (rand == 11) {
-
-    } else if (rand == 12) {
-
-    } else if (rand == 13) {
-
-    } else if (rand == 14) {
-
-    } else if (rand == 15) {
-
-    } else if (rand == 16) {
-
-    } else if (rand == 17) {
-
-    } else if (rand == 18) {
-
-    } else if (rand == 19) {
-
-    } else {
-
-    }
-=======
     var rand = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+<<<<<<< HEAD
+    var num = sp[rand]
+    message.channel.send(num);
+=======
     console.log(sp[rand]);
     message.channel.send(sp[rand]);
->>>>>>> 76148687d1ea8a974e53c83c0fe86f1bc9a8c48d
+>>>>>>> 08c187271cab7b3f3652a43af9131afe05513557
   }
   //commands end here
 });
