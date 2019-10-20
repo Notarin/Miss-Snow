@@ -4,6 +4,11 @@ const client = new Discord.Client();
 const conf = require("./config.json");
 const pp = require("./pp.json");
 const fs = require('fs');
+<<<<<<< HEAD
+=======
+const help = require("./commands.json");
+const sp = require("./shitpost.json");
+>>>>>>> 76148687d1ea8a974e53c83c0fe86f1bc9a8c48d
 
 //startup code
 client.on('ready', () => {
@@ -72,6 +77,7 @@ client.on("message", message => {
     }
   }
   if (command === 'shitpost') {
+<<<<<<< HEAD
     var rand = Math.floor(Math.random() * (20 - 1 + 1) + 1)
     if (rand == 1) {
 
@@ -114,6 +120,11 @@ client.on("message", message => {
     } else {
 
     }
+=======
+    var rand = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+    console.log(sp[rand]);
+    message.channel.send(sp[rand]);
+>>>>>>> 76148687d1ea8a974e53c83c0fe86f1bc9a8c48d
   }
   //commands end here
 });
