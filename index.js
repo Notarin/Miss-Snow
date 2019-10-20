@@ -74,9 +74,7 @@ client.on("message", message => {
     }
   }
   if (command === 'shitpost') {
-    var rand = Math.floor(Math.random() * (3 - 1 + 1) + 1);
-    var num = sp[rand]
-    message.channel.send(num);
+    var rand = Math.floor(Math.random() * 3;
     console.log(sp[rand]);
     message.channel.send(sp[rand]);
   }
