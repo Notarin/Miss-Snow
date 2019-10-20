@@ -12,7 +12,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setActivity(conf.prefix);
   if (conf.debug==1) {
-    console.log("debugging on")
+    console.log("debugging is currently on")
   }
 });
 
@@ -40,10 +40,10 @@ client.on("message", message => {
   }
   else {
     if (conf.debug) {
-      console.log("failed as: " + message.author);
-      console.log("needed: " + conf.ownerID);
+      console.log("user failed authentification: " + message.author);
+      console.log("passing: " + conf.ownerID);
     }
-    message.reply("you dont have the permission, sorry.:()")
+    message.reply("you dont have the permission, sorry.:(")
   }
   }
   if (command === 'test') {
