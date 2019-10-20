@@ -4,7 +4,6 @@ const client = new Discord.Client();
 const conf = require("./config.json");
 const pp = require("./pp.json");
 const fs = require('fs');
-const help = require("./commands.json");
 
 //startup code
 client.on('ready', () => {
@@ -27,7 +26,7 @@ client.on("message", message => {
   const argl = message.content.slice(conf.prefix.length + command.length)
   //commands start here
   if (command === 'help') {
-    console.log(help);
+    message.channel.send(fs.readFileSync('./commands.json').toString());
   }
   if (command === 'invite') {
     message.reply("https://discordapp.com/api/oauth2/authorize?client_id=468281346200961024&permissions=8&scope=bot")
@@ -113,7 +112,7 @@ client.on("message", message => {
     } else if (rand == 19) {
 
     } else {
-      
+
     }
   }
   //commands end here
