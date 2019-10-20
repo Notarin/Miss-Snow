@@ -28,7 +28,7 @@ client.on("message", message => {
   const argl = message.content.slice(conf.prefix.length + command.length)
   //commands start here
   if (command === 'help') {
-    console.log(help);
+    message.channel.send(fs.readFileSync('./commands.json').toString());
   }
   if (command === 'invite') {
     message.reply("https://discordapp.com/api/oauth2/authorize?client_id=468281346200961024&permissions=8&scope=bot")
@@ -75,8 +75,13 @@ client.on("message", message => {
   }
   if (command === 'shitpost') {
     var rand = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+<<<<<<< HEAD
     var num = sp[rand]
     message.channel.send(num);
+=======
+    console.log(sp[rand]);
+    message.channel.send(sp[rand]);
+>>>>>>> 08c187271cab7b3f3652a43af9131afe05513557
   }
   //commands end here
 });
