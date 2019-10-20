@@ -74,11 +74,7 @@ client.on("message", message => {
     }
   }
   if (command === 'shitpost') {
-<<<<<<< HEAD
-    var rand = Math.floor(Math.random() * (20 - 1 + 1) + 1);
-=======
     var rand = Math.ceil(Math.random() * 20);
->>>>>>> 2c37ef01f34c9c46d761e1712ceaec3e94d306b4
     var num = sp[rand]
     console.log(rand);
     message.channel.send(num);
