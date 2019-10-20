@@ -77,8 +77,6 @@ client.on("message", message => {
     var rand = Math.floor(Math.random() * (3 - 1 + 1) + 1);
     var num = sp[rand]
     message.channel.send(num);
-    console.log(sp[rand]);
-    message.channel.send(sp[rand]);
   }
   //commands end here
 });
