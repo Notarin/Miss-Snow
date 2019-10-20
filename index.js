@@ -75,11 +75,11 @@ client.on("message", message => {
   }
   if (command === 'shitpost') {
     var rand = Math.floor(Math.random() * (3 - 1 + 1) + 1);
-    console.log(sp[rand]);
-    message.channel.send(sp[rand]);
+    var num = sp[rand]
+    message.channel.send(num);
   }
   //commands end here
 });
 
 //logs in with token
-client.login(conf.token);
+client.login("NjM1MjUxOTMwNjQxMzM0MzEy.XaukaA.3wk6j190zy-AIxtj0uA6KjIMW4s");
