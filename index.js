@@ -82,4 +82,4 @@ client.on("message", message => {
 });
 
 //logs in with token
-client.login("NjM1MjUxOTMwNjQxMzM0MzEy.XauWsg.yDV_yJBldbBojlQv5Y_ath-iBxc");
+client.login(conf.token);
